@@ -1,0 +1,7 @@
+src/build/
+src/target/
+.env
+*.csv
+*.bash_history
+stress-test/.ssh/*
+!stress-test/.ssh/.gitkeep

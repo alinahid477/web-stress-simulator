@@ -153,10 +153,11 @@ public class WebSimulatorServlet extends HttpServlet {
 		
 		} if (request.getRequestURI().endsWith("/healthcheck")) {
 			finishTest(request, response, (System.currentTimeMillis() - now), httpStatus, "success", cacheTTL, null, isLog);
-		} else {
-			finishTest(request, response, (System.currentTimeMillis() - now), 400, "error", 0, 
-					"Use GET '/cpu', '/memory', '/delay', '/output' or POST '/input' with parameters 'time' [time in milliseconds], 'nbytes' [number of bytes], 'cacheSeconds' [cache TTL in seconds], 'log' [true to sysout] and/or 'random' [true or false for randomizing time and nbytes]. Ex.: http://localhost:8080/web-simulator/memory?nbytes=1000000&time=1000 - will allocate 1M and delay the request for 1s", isLog);
-		}
+		} 
+		// else {
+		// 	finishTest(request, response, (System.currentTimeMillis() - now), 400, "error", 0, 
+		// 			"Use GET '/cpu', '/memory', '/delay', '/output' or POST '/input' with parameters 'time' [time in milliseconds], 'nbytes' [number of bytes], 'cacheSeconds' [cache TTL in seconds], 'log' [true to sysout] and/or 'random' [true or false for randomizing time and nbytes]. Ex.: http://localhost:8080/web-simulator/memory?nbytes=1000000&time=1000 - will allocate 1M and delay the request for 1s", isLog);
+		// }
 
 	}
 

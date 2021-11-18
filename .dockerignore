@@ -1,0 +1,14 @@
+.bash_history
+.kube
+.local
+.docker
+.docker/config.json
+.vmware-cna-saas
+.aws
+.tanzu
+.ssh
+.kube-tkg
+images
+.config
+.cache
+stress-test
